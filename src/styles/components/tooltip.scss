@@ -1,0 +1,25 @@
+.widget-tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  min-height: 58px;
+  text-align: center;
+  font-size: 1rem;
+  background-color: $tooltipBg;
+  color: $tooltipColor;
+  border-radius: 4px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 38px;
+    bottom: -9px;
+    width: 0;
+    height: 0;
+    border-left: 7.5px solid transparent;
+    border-right: 6.5px solid transparent;
+    border-top: 10px solid $tooltipBg;
+  }
+}

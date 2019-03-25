@@ -1,0 +1,15 @@
+.widget-footer {
+  display: flex;
+  &__item {
+    flex: 1;
+
+    & + & {
+      margin-left: 22px;
+    }
+  }
+  &__button {
+    @extend .button-default;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}

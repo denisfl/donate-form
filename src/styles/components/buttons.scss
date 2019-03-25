@@ -1,0 +1,46 @@
+@mixin button ($mainColor, $secondaryColor: black, $index: 94) {
+  transition: background-color 0.2s ease;
+  &:focus-within {
+    outline-style: none;
+  }
+  &:hover,
+  &:focus-within {
+    background-color: mix($mainColor, $secondaryColor, $index);
+  }
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  display: inline-block;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &[disabled] {
+    pointer-events: none;
+    opacity: 0.8;
+  }
+}
+
+.button {
+  &-default {
+
+    height: 45px;
+    color: $buttonDefaultColor;
+    background-color: $defaultButtonColor;
+    border: 1px solid $secondaryColor;
+    box-shadow: 0 1.5px 0px 0px $secondaryColor;
+    @include button($defaultButtonColor);
+  }
+  &-primary {
+    color: white;
+    background-color: $successColor;
+    @include button($successColor);
+  }
+}

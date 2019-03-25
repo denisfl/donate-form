@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $baseFontFamily;
+  color: $baseColor;
+}
+
+.app {
+  display: grid;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+p {
+  margin: 0 0 16px;
+  line-height: 1.58;
+}

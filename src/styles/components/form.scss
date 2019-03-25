@@ -1,0 +1,75 @@
+.widget-form {
+  $gup: 28px;
+
+  %elements {
+    width: 100%;
+    height: $formElementsHeight;
+    border-radius: 3px;
+    font-size: 1.3rem;
+  }
+
+  margin-top: -2px;
+  &__group {
+    display: flex;
+
+    & + & {
+      margin-top: 12px;
+    }
+  }
+  &__col {
+    flex: 1;
+
+    & + & {
+      margin-left: 22px;
+    }
+  }
+  &__label {
+    display: block;
+    position: relative;
+    &:after {
+      content: attr(data-currency);
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: $gup;
+      display: flex;
+      align-items: center;
+      font-size: 1.3rem;
+      font-weight: bold;
+      padding-left: 9px;
+      padding-bottom: 4px;
+      color: $formCurrencyColor;
+    }
+  }
+  &__field {
+    @extend %elements;
+    padding: 16px 10px 20px 24px;
+    font-weight: bold;
+    border: 1px solid $inputDefaultBorder;
+    box-shadow: inset 0 0 2px $secondaryColor;
+    outline: none;
+    transition: border-color 0.2s ease;
+    &:focus {
+      border-color: $inputHoverBorder;
+    }
+    &:invalid {
+      border-color: $inputInvalidBorder;
+    }
+  }
+  &__button {
+    @extend %elements;
+    @extend .button-primary;
+  }
+  &__help {
+    color: $linkColor;
+    font-style: italic;
+    font-size: 0.85rem;
+    text-decoration: underline;
+    transition: opacity .2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

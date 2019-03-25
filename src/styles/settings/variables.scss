@@ -1,0 +1,24 @@
+$baseFontFamily: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$baseFontSize: 16px;
+
+$baseColor: #424242;
+$successColor: #1dbc2c;
+$dangerColor: #ed6039;
+
+$linkColor: #39a0c1;
+$defaultButtonColor: #fafafa;
+
+$secondaryColor: #e5e5e5;
+
+$contentColor: mix($baseColor, white, 65);
+$buttonDefaultColor: mix($baseColor, white, 72);
+$tooltipBg: $baseColor;
+$tooltipColor: white;
+
+$inputDefaultBorder: $secondaryColor;
+$inputHoverBorder: $successColor;
+$inputInvalidBorder: $dangerColor;
+
+
+$formElementsHeight: 60px;
+$formCurrencyColor: mix($baseColor, white, 65);

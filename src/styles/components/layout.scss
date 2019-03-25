@@ -1,0 +1,21 @@
+.widget {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 71px;
+  width: 350px;
+
+  &-inner {
+    margin-bottom: 18px;
+    border: 1px solid $secondaryColor;
+    box-shadow: 0 2px 2px 0px $secondaryColor;
+  }
+
+  &-content {
+    padding: 13px 25px 23px;
+    color: $contentColor;
+  }
+}
+
+.text-danger {
+  color: $dangerColor;
+}
