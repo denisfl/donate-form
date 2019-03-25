@@ -11,6 +11,9 @@ body {
   display: grid;
   padding: 2rem;
   min-height: 100vh;
+  > div {
+    margin: auto;
+  }
 }
 
 p {
